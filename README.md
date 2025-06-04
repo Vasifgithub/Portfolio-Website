@@ -1,5 +1,5 @@
 # Welcome to your Portfolio-website project
-![My Profile Website](portfolio-image.png)
+![My Profile Website](https://github.com/Vasifgithub/Portfolio-Website/blob/main/Portfolio-image.png)
 
 Follow these steps:
 
