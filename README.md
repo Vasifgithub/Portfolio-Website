@@ -1,4 +1,5 @@
 # Welcome to your Portfolio-website project
+![My Profile Website](portfolio-image.png)
 
 Follow these steps:
 
