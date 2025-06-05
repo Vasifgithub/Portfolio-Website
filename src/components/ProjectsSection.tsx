@@ -61,7 +61,7 @@ const ProjectsSection = () => {
       category: "Full Stack",
       description: "Comprehensive full-stack MERN application for bike rental management featuring JWT authentication, User and admin login, real-time booking system. Successfully reduced manual operations by 70% and improved customer experience significantly.",
       detailedDescription: "BIKEZZ is a complete bike rental platform built with modern web technologies. The application features user authentication, bike inventory management, booking system, and comprehensive admin controls by CRUD Operations.",
-      technologies: ["MongoDB", "Express.js", "React.js", "Node.js", "JWT", "CSS3", "Bootstrap", "HTML5", "sJavaScript", "GitHub", "Vercel"],
+      technologies: ["MongoDB", "Express.js", "React.js", "Node.js", "JWT", "CSS3", "Bootstrap", "HTML5", "JavaScript", "GitHub", "Vercel"],
       highlights: ["70% Efficiency Improvement", "Real-time Booking System", "User-Admin Login", "JWT Authentication", "Responsive Design"],
       challenges: ["Real-time data synchronization", "Payment gateway integration", "Scalable architecture design", "User experience optimization"],
       outcomes: ["Successful internship completion", "Live production deployment", "Positive user feedback", "Business process automation"],
@@ -157,30 +157,30 @@ const ProjectsSection = () => {
       );
 
   return (
-    <section id="projects" className="py-20 bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900">
+    <section id="projects" className="py-12 md:py-20 bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header Section */}
-        <div className="text-center mb-16">
-          <div className="inline-flex items-center justify-center w-16 h-16 bg-gradient-to-r from-blue-600 to-purple-600 rounded-full mb-6 shadow-lg transform transition-all hover:scale-105 hover:shadow-xl hover:rotate-3">
-            <Target className="w-8 h-8 text-white" />
+        <div className="text-center mb-12 md:mb-16">
+          <div className="inline-flex items-center justify-center w-12 h-12 md:w-16 md:h-16 bg-gradient-to-r from-blue-600 to-purple-600 rounded-full mb-4 md:mb-6 shadow-lg transform transition-all hover:scale-105 hover:shadow-xl hover:rotate-3">
+            <Target className="w-5 h-5 md:w-8 md:h-8 text-white" />
           </div>
-          <h2 className="text-4xl font-bold font-space text-white mb-4">
+          <h2 className="text-3xl md:text-4xl font-bold font-space text-white mb-3 md:mb-4">
             Featured <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400">Projects</span>
           </h2>
-          <div className="w-20 h-1 bg-gradient-to-r from-blue-600 to-purple-600 rounded-full mx-auto mb-6"></div>
-          <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+          <div className="w-16 md:w-20 h-1 bg-gradient-to-r from-blue-600 to-purple-600 rounded-full mx-auto mb-4 md:mb-6"></div>
+          <p className="text-lg md:text-xl text-gray-300 max-w-3xl mx-auto">
             Innovative solutions spanning AI/ML research, full-stack development, and IoT applications with real-world impact
           </p>
         </div>
 
         {/* Category Filter */}
-        <div className="flex flex-wrap justify-center gap-3 mb-12">
+        <div className="flex flex-wrap justify-center gap-2 md:gap-3 mb-8 md:mb-12">
           {categories.map((category) => (
             <Button
               key={category}
               onClick={() => setSelectedCategory(category)}
               variant={selectedCategory === category ? "default" : "outline"}
-              className={`px-6 py-2 rounded-full transition-all duration-300 font-medium ${
+              className={`px-4 py-1 md:px-6 md:py-2 rounded-full transition-all duration-300 text-sm md:text-base font-medium ${
                 selectedCategory === category 
                   ? 'bg-gradient-to-r from-blue-600 to-purple-600 text-white shadow-lg hover:shadow-xl hover:brightness-110 hover:scale-105' 
                   : 'text-gray-300 border-gray-700 bg-gray-800 hover:bg-gray-700 hover:text-white hover:border-gray-600 hover:scale-105'
@@ -192,7 +192,7 @@ const ProjectsSection = () => {
         </div>
 
         {/* Projects Grid */}
-        <div className="grid lg:grid-cols-2 gap-8">
+        <div className="grid gap-6 sm:grid-cols-1 lg:grid-cols-2">
           {filteredProjects.map((project, index) => (
             <Card 
               key={index} 
@@ -210,36 +210,36 @@ const ProjectsSection = () => {
               {/* Glow effect on hover */}
               <div className="absolute inset-0 bg-gradient-to-br from-transparent via-gray-900/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none"></div>
 
-              <CardHeader className="pb-4 pt-6">
-                <div className="flex items-start justify-between mb-4">
-                  <div className="flex items-center space-x-3">
+              <CardHeader className="pb-3 pt-4 md:pb-4 md:pt-6">
+                <div className="flex items-start justify-between mb-3 md:mb-4">
+                  <div className="flex items-center space-x-2 md:space-x-3">
                     <div className={`
-                      p-3 rounded-xl bg-gradient-to-r ${project.color} 
-                      text-white shadow-lg text-2xl 
+                      p-2 md:p-3 rounded-xl bg-gradient-to-r ${project.color} 
+                      text-white shadow-lg text-xl md:text-2xl 
                       transition-transform duration-500
                       group-hover:scale-110 group-hover:shadow-md
                     `}>
                       {project.icon}
                     </div>
                     <div className="flex-1 min-w-0">
-                      <CardTitle className="text-xl text-white leading-tight truncate">
+                      <CardTitle className="text-lg md:text-xl text-white leading-tight line-clamp-2">
                         {project.title}
                       </CardTitle>
-                      <div className="flex flex-wrap items-center gap-2 mt-2">
-                        <Badge className={`bg-gradient-to-r ${project.color} text-white border-0`}>
+                      <div className="flex flex-wrap items-center gap-1 md:gap-2 mt-1 md:mt-2">
+                        <Badge className={`bg-gradient-to-r ${project.color} text-white border-0 text-xs md:text-sm`}>
                           {project.type}
                         </Badge>
                         <Badge variant="outline" className="text-xs bg-gray-700 text-gray-300 border-gray-600">
                           {project.status}
                         </Badge>
-                        <span className="text-sm text-gray-400 whitespace-nowrap">
+                        <span className="text-xs md:text-sm text-gray-400 whitespace-nowrap">
                           {project.duration}
                         </span>
                       </div>
                     </div>
                   </div>
                   {project.featured && (
-                    <Badge className="bg-yellow-900/30 text-yellow-400 border-yellow-800 shadow-sm group-hover:bg-yellow-900/40 transition-colors">
+                    <Badge className="bg-yellow-900/30 text-yellow-400 border-yellow-800 shadow-sm group-hover:bg-yellow-900/40 transition-colors text-xs md:text-sm">
                       <Star className="w-3 h-3 mr-1" />
                       Featured
                     </Badge>
@@ -247,21 +247,21 @@ const ProjectsSection = () => {
                 </div>
               </CardHeader>
               
-              <CardContent className="space-y-6 pb-6">
+              <CardContent className="space-y-4 md:space-y-6 pb-4 md:pb-6">
                 {/* Project description */}
                 <div className="transition-all duration-500 group-hover:translate-x-1">
-                  <p className="text-gray-300 leading-relaxed">
+                  <p className="text-gray-300 leading-relaxed text-sm md:text-base">
                     {project.description}
                   </p>
                 </div>
                 
                 {/* Detailed description */}
-                <div className="bg-gray-700/30 p-4 rounded-lg border border-gray-700 backdrop-blur-sm transition-all duration-500 group-hover:bg-gray-700/40 group-hover:shadow-md">
-                  <h4 className="font-semibold text-white mb-2 flex items-center">
+                <div className="bg-gray-700/30 p-3 md:p-4 rounded-lg border border-gray-700 backdrop-blur-sm transition-all duration-500 group-hover:bg-gray-700/40 group-hover:shadow-md">
+                  <h4 className="font-semibold text-white mb-1 md:mb-2 flex items-center text-sm md:text-base">
                     <FileText className="w-4 h-4 mr-2 text-blue-400" />
                     Project Details
                   </h4>
-                  <p className="text-sm text-gray-300 leading-relaxed">
+                  <p className="text-xs md:text-sm text-gray-300 leading-relaxed">
                     {project.detailedDescription}
                   </p>
                 </div>
@@ -290,15 +290,15 @@ const ProjectsSection = () => {
                 
                 {/* Key Achievements */}
                 <div className="transition-all duration-500 group-hover:translate-x-1">
-                  <h4 className="font-semibold text-white mb-3 flex items-center">
+                  <h4 className="font-semibold text-white mb-2 md:mb-3 flex items-center text-sm md:text-base">
                     <Award className="w-4 h-4 mr-2 text-blue-400" />
                     Key Achievements
                   </h4>
-                  <div className="flex flex-wrap gap-2">
+                  <div className="flex flex-wrap gap-1 md:gap-2">
                     {project.highlights.map((highlight, idx) => (
                       <Badge 
                         key={idx} 
-                        className="bg-green-900/30 text-green-400 hover:bg-green-900/40 px-3 py-1 border-green-800 transition-colors hover:scale-105"
+                        className="bg-green-900/30 text-green-400 hover:bg-green-900/40 px-2 py-0.5 md:px-3 md:py-1 border-green-800 transition-colors hover:scale-105 text-xs md:text-sm"
                       >
                         {highlight}
                       </Badge>
@@ -308,16 +308,16 @@ const ProjectsSection = () => {
                 
                 {/* Technologies */}
                 <div className="transition-all duration-500 group-hover:translate-x-1">
-                  <h4 className="font-semibold text-white mb-3 flex items-center">
+                  <h4 className="font-semibold text-white mb-2 md:mb-3 flex items-center text-sm md:text-base">
                     <TrendingUp className="w-4 h-4 mr-2 text-purple-400" />
                     Technologies & Tools
                   </h4>
-                  <div className="flex flex-wrap gap-2">
+                  <div className="flex flex-wrap gap-1 md:gap-2">
                     {project.technologies.map((tech, idx) => (
                       <Badge 
                         key={idx} 
                         variant="secondary" 
-                        className="bg-blue-900/30 text-blue-400 px-3 py-1 border-blue-800 hover:bg-blue-900/40 transition-colors hover:scale-105"
+                        className="bg-blue-900/30 text-blue-400 px-2 py-0.5 md:px-3 md:py-1 border-blue-800 hover:bg-blue-900/40 transition-colors hover:scale-105 text-xs md:text-sm"
                       >
                         {tech}
                       </Badge>
@@ -326,43 +326,43 @@ const ProjectsSection = () => {
                 </div>
 
                 {/* Institution info */}
-                <div className="flex items-center justify-between text-sm text-gray-400 bg-gray-700/30 p-3 rounded-lg border border-gray-700 backdrop-blur-sm transition-all duration-500 group-hover:bg-gray-700/40 group-hover:shadow-md">
-                  <div className="flex items-center space-x-2">
-                    <Calendar className="w-4 h-4 text-gray-500" />
+                <div className="flex items-center justify-between text-xs md:text-sm text-gray-400 bg-gray-700/30 p-2 md:p-3 rounded-lg border border-gray-700 backdrop-blur-sm transition-all duration-500 group-hover:bg-gray-700/40 group-hover:shadow-md">
+                  <div className="flex items-center space-x-1 md:space-x-2">
+                    <Calendar className="w-3 h-3 md:w-4 md:h-4 text-gray-500" />
                     <span>{project.institution}</span>
                   </div>
-                  <div className="flex items-center space-x-2">
-                    <Users className="w-4 h-4 text-gray-500" />
+                  <div className="flex items-center space-x-1 md:space-x-2">
+                    <Users className="w-3 h-3 md:w-4 md:h-4 text-gray-500" />
                     <span>Team: {project.teamSize}</span>
                   </div>
                 </div>
 
                 {/* Action Buttons */}
-                <div className="flex flex-col sm:flex-row gap-3 pt-4">
+                <div className="flex flex-col sm:flex-row gap-2 md:gap-3 pt-3 md:pt-4">
                   {project.title === "Online Bike Showroom – BIKEZZ" ? (
                     <>
                       <Button 
-                        className="flex-1 bg-gradient-to-r from-blue-500 to-indigo-500 text-white shadow-md hover:shadow-lg hover:brightness-110 transition-all duration-300 transform hover:-translate-y-0.5 hover:scale-[1.02]"
+                        className="flex-1 bg-gradient-to-r from-blue-500 to-indigo-500 text-white shadow-md hover:shadow-lg hover:brightness-110 transition-all duration-300 transform hover:-translate-y-0.5 hover:scale-[1.02] text-xs md:text-sm"
                         onClick={() => window.open(project.frontendUrl, '_blank')}
                       >
-                        <Github className="w-4 h-4 mr-2" />
+                        <Github className="w-3 h-3 md:w-4 md:h-4 mr-1 md:mr-2" />
                         Frontend Code
                       </Button>
                       
                       <Button 
-                        className="flex-1 bg-gradient-to-r from-purple-600 to-indigo-600 text-white shadow-md hover:shadow-lg hover:brightness-110 transition-all duration-300 transform hover:-translate-y-0.5 hover:scale-[1.02]"
+                        className="flex-1 bg-gradient-to-r from-purple-600 to-indigo-600 text-white shadow-md hover:shadow-lg hover:brightness-110 transition-all duration-300 transform hover:-translate-y-0.5 hover:scale-[1.02] text-xs md:text-sm"
                         onClick={() => window.open(project.backendUrl, '_blank')}
                       >
-                        <Github className="w-4 h-4 mr-2" />
+                        <Github className="w-3 h-3 md:w-4 md:h-4 mr-1 md:mr-2" />
                         Backend Code
                       </Button>
                     </>
                   ) : (
                     <Button 
-                      className={`flex-1 bg-gradient-to-r ${project.color} text-white shadow-md hover:shadow-lg hover:brightness-110 transition-all duration-300 transform hover:-translate-y-0.5 hover:scale-[1.02]`}
+                      className={`flex-1 bg-gradient-to-r ${project.color} text-white shadow-md hover:shadow-lg hover:brightness-110 transition-all duration-300 transform hover:-translate-y-0.5 hover:scale-[1.02] text-xs md:text-sm`}
                       onClick={() => window.open(project.githubUrl, '_blank')}
                     >
-                      <Github className="w-4 h-4 mr-2" />
+                      <Github className="w-3 h-3 md:w-4 md:h-4 mr-1 md:mr-2" />
                       Source Code
                     </Button>
                   )}
@@ -371,10 +371,10 @@ const ProjectsSection = () => {
                   {project.title !== "Portfolio Website" && (
                     <Button 
                       variant="outline" 
-                      className="flex-1 text-gray-300 border-gray-600 bg-gray-800 hover:bg-gray-700 hover:text-white hover:border-gray-500 transition-all duration-300 transform hover:-translate-y-0.5 hover:scale-[1.02]"
+                      className="flex-1 text-gray-300 border-gray-600 bg-gray-800 hover:bg-gray-700 hover:text-white hover:border-gray-500 transition-all duration-300 transform hover:-translate-y-0.5 hover:scale-[1.02] text-xs md:text-sm"
                       onClick={() => window.open(project.documentationUrl, '_blank')}
                     >
-                      <FileText className="w-4 h-4 mr-2" />
+                      <FileText className="w-3 h-3 md:w-4 md:h-4 mr-1 md:mr-2" />
                       Documentation
                     </Button>
                   )}
@@ -385,14 +385,14 @@ const ProjectsSection = () => {
         </div>
 
         {/* View More Button */}
-        <div className="mt-16 text-center">
+        <div className="mt-12 md:mt-16 text-center">
           <Button 
-            className="px-8 py-4 text-white font-medium bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-500 hover:to-purple-500 shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-0.5 hover:scale-105 relative overflow-hidden group"
+            className="px-6 py-3 md:px-8 md:py-4 text-white font-medium bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-500 hover:to-purple-500 shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-0.5 hover:scale-105 relative overflow-hidden group text-sm md:text-base"
             onClick={() => window.open('https://github.com/Vasifgithub?tab=repositories', '_blank')}
           >
             <span className="relative z-10 flex items-center">
               View All Projects
-              <ExternalLink className="w-4 h-4 ml-2" />
+              <ExternalLink className="w-3 h-3 md:w-4 md:h-4 ml-1 md:ml-2" />
             </span>
             <span className="absolute inset-0 bg-gradient-to-r from-blue-500 to-purple-500 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></span>
           </Button>
