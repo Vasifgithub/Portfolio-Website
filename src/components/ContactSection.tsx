@@ -334,8 +334,9 @@ const ContactSection = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: 0.3 }}
+              className="h-full"
             >
-              <Card className="border-0 bg-gray-800 shadow-lg">
+              <Card className="border-0 bg-gray-800 shadow-lg h-full">
                 <CardHeader className="pb-3">
                   <div className="flex items-center space-x-3">
                     <div className="p-2 bg-blue-600/10 rounded-lg">
@@ -371,21 +372,22 @@ const ContactSection = () => {
               </Card>
             </motion.div>
 
-            {/* Download Resume Card */}
+            {/* Download Resume Card - UPDATED */}
             <motion.div 
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: 0.4 }}
+              className="h-full"
             >
-              <Card className="border-0 bg-gradient-to-br from-blue-700/90 to-indigo-700/90 shadow-lg">
-                <CardContent className="p-3 flex flex-col h-full">
-                  <div className="text-center">
-                    <div className="p-1.5 bg-white/10 rounded-full mb-2 inline-flex">
-                      <Download className="w-4 h-4 text-white" />
+              <Card className="border-0 bg-gradient-to-br from-blue-700/90 to-indigo-700/90 shadow-lg h-full">
+                <CardContent className="p-5 flex flex-col h-full">
+                  <div className="text-center flex-grow">
+                    <div className="p-3 bg-white/10 rounded-full mb-4 inline-flex">
+                      <Download className="w-6 h-6 text-white" />
                     </div>
-                    <h3 className="text-xs font-semibold text-white mb-1">Download Resume</h3>
-                    <p className="text-blue-100 text-2xs mb-2">
+                    <h3 className="text-xl font-bold text-white mb-2">Download Resume</h3>
+                    <p className="text-blue-100 text-sm mb-4">
                       Get my complete professional profile
                     </p>
                   </div>
@@ -393,38 +395,39 @@ const ContactSection = () => {
                     href="https://drive.google.com/file/d/1rl1JiybDdPrDqbFDKU1Iw6XRE0xw9aSZ/view?usp=sharing"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="w-full inline-flex items-center justify-center bg-white text-blue-700 hover:bg-gray-50 text-2xs font-medium py-1.5 px-3 rounded-md transition-colors shadow-sm mt-auto"
+                    className="w-full inline-flex items-center justify-center bg-white text-blue-700 hover:bg-gray-50 text-base font-medium py-3 px-4 rounded-md transition-colors shadow-sm"
                   >
-                    <Download className="w-3 h-3 mr-1" />
+                    <Download className="w-5 h-5 mr-2" />
                     Download PDF
                   </a>
                 </CardContent>
               </Card>
             </motion.div>
 
-            {/* Let's Connect Card */}
+            {/* Let's Connect Card - UPDATED */}
             <motion.div 
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: 0.5 }}
+              className="h-full"
             >
-              <Card className="border-0 bg-gradient-to-br from-purple-700/90 to-violet-700/90 shadow-lg">
-                <CardContent className="p-3 flex flex-col h-full">
-                  <div className="text-center">
-                    <div className="p-1.5 bg-white/10 rounded-full mb-2 inline-flex">
-                      <MessageCircle className="w-4 h-4 text-white" />
+              <Card className="border-0 bg-gradient-to-br from-purple-700/90 to-violet-700/90 shadow-lg h-full">
+                <CardContent className="p-5 flex flex-col h-full">
+                  <div className="text-center flex-grow">
+                    <div className="p-3 bg-white/10 rounded-full mb-4 inline-flex">
+                      <MessageCircle className="w-6 h-6 text-white" />
                     </div>
-                    <h3 className="text-xs font-semibold text-white mb-1">Let's Connect</h3>
-                    <p className="text-purple-100 text-2xs mb-2">
+                    <h3 className="text-xl font-bold text-white mb-2">Let's Connect</h3>
+                    <p className="text-purple-100 text-sm mb-4">
                       Interested in working together?
                     </p>
                   </div>
                   <a
                     href="mailto:vasif951521@gmail.com"
-                    className="w-full inline-flex items-center justify-center bg-white text-purple-700 hover:bg-gray-50 text-2xs font-medium py-1.5 px-3 rounded-md transition-colors shadow-sm mt-auto"
+                    className="w-full inline-flex items-center justify-center bg-white text-purple-700 hover:bg-gray-50 text-base font-medium py-3 px-4 rounded-md transition-colors shadow-sm"
                   >
-                    <Mail className="w-3 h-3 mr-1" />
+                    <Mail className="w-5 h-5 mr-2" />
                     Contact Me
                   </a>
                 </CardContent>
