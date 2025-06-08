@@ -166,7 +166,7 @@ const AboutSection = () => {
               { icon: <Code className="w-8 h-8 text-blue-400" />, label: "publications", value: "1" },
               { icon: <Briefcase className="w-8 h-8 text-green-400" />, label: "Projects Completed", value: "5+" },
               { icon: <Award className="w-8 h-8 text-yellow-400" />, label: "Certifications", value: "8+" },
-              { icon: <Star className="w-8 h-8 text-purple-400" />, label: "Academic Excellence", value: "3" }
+              { icon: <Star className="w-8 h-8 text-purple-400" />, label: "Lanuages Known", value: "3" }
             ].map(({ icon, label, value }, i) => (
               <div
                 key={i}
