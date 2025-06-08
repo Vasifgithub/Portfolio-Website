@@ -1,63 +1,41 @@
 import React from 'react';
 import { Card, CardContent } from '@/components/ui/card';
-import { GraduationCap, Briefcase, Award, Globe, Code, Target, Heart, MapPin, MoveLeft } from 'lucide-react';
+import { GraduationCap, Briefcase, Award, Code, Target, Heart, BookOpen, School, Trophy, Star } from 'lucide-react';
 
 const AboutSection = () => {
-  const highlights = [
-    {
-      title: "Education",
-      content: (
-        <>
-          B.Tech in Computer Science and Engineering with AI/ML specialization at VIT-AP University - Amaravati 
-          <br />
-          <strong>2021-2025</strong>
-        </>
-      ),
-      icon: <GraduationCap className="w-8 h-8" />,
-      color: "from-blue-600 to-cyan-600",
-      bgColor: "from-blue-900 to-cyan-900"
-    },
-    {
-      title: "Experience",
-      content: (
-        <>
-          MERN Full Stack Development Intern at ETHNUS
-          <br />
-          <strong>(Aug-Nov 2023)</strong>
-        </>
-      ),
-      icon: <Briefcase className="w-8 h-8" />,
-      color: "from-green-600 to-emerald-600",
-      bgColor: "from-green-900 to-emerald-900"
-    },
-    {
-      title: "Certifications",
-      content: "AWS Certified Cloud Practitioner & Published AI Researcher",
-      icon: <Award className="w-8 h-8" />,
-      color: "from-amber-500 to-yellow-500",
-      bgColor: "from-amber-900 to-yellow-900"
-    },
-    {
-      title: "Languages",
-      content: "English, Hindi (Professional) | Telugu (Native)",
-      icon: <Globe className="w-8 h-8" />,
-      color: "from-purple-600 to-pink-600",
-      bgColor: "from-purple-900 to-pink-900"
-    },
-    {
-      title: "Location",
-      content: "Ananthapur, Andhra Pradesh, India",
-      icon: <MapPin className="w-8 h-8" />,
-      color: "from-emerald-500 to-blue-500",
-      bgColor: "from-emerald-900 to-blue-900"
-    }
-  ];
-
   const passions = [
     { icon: "🤖", title: "AI & ML", desc: "Deep Learning, NLP" },
     { icon: "☁️", title: "Cloud", desc: "AWS, Serverless" },
     { icon: "🌐", title: "Web Dev", desc: "MERN, React, Node" },
     { icon: "🔬", title: "Research", desc: "AI-based Papers" }
+  ];
+
+  const educationTimeline = [
+    {
+      icon: <GraduationCap className="w-5 h-5 text-blue-400" />,
+      period: "2021-2025",
+      title: "B.Tech in CSE - AIML",
+      institution: "VIT-AP University, Amaravati",
+      performance: "CGPA: 8.19",
+      color: "from-blue-500 to-cyan-500",
+      highlight: true
+    },
+    {
+      icon: <School className="w-5 h-5 text-purple-400" />,
+      period: "2019-2021",
+      title: "Intermediate (MPC)",
+      institution: "Narayana Junior College",
+      performance: "Percentage: 94.7%",
+      color: "from-purple-500 to-pink-500"
+    },
+    {
+      icon: <BookOpen className="w-5 h-5 text-green-400" />,
+      period: "2018-2019",
+      title: "10th Standard",
+      institution: "Sree Sarada Vidya Mandir",
+      performance: "CGPA: 9.7",
+      color: "from-green-500 to-teal-500"
+    }
   ];
 
   return (
@@ -74,53 +52,86 @@ const AboutSection = () => {
           </p>
         </div>
 
-        <div className="grid lg:grid-cols-2 gap-16 items-start mb-16">
-          {/* My Journey */}
-          <div className="space-y-8">
-            <div className="bg-gradient-to-br from-blue-900 to-purple-900 rounded-2xl p-8 shadow-xl border border-blue-800">
-              <div className="flex items-center space-x-3 mb-6">
+        {/* Balanced height cards */}
+        <div className="grid lg:grid-cols-2 gap-16 items-stretch mb-16">
+          {/* My Journey - condensed content */}
+          <div className="h-full">
+            <div className="bg-gradient-to-br from-blue-900 to-purple-900 rounded-2xl p-6 shadow-xl border border-blue-800 h-full flex flex-col">
+              <div className="flex items-center space-x-3 mb-4">
                 <div className="p-3 bg-gradient-to-br from-blue-600 to-purple-600 rounded-xl">
                   <Target className="w-6 h-6 text-white" />
                 </div>
                 <h3 className="text-2xl font-bold text-white">My Journey</h3>
               </div>
-              <div className="space-y-6 text-lg text-gray-300 leading-relaxed">
-                <p className="text-left">
-                  I'm a passionate software engineer with a strong foundation in Java programming and hands-on experience in MERN Full Stack Development. During my academic journey at VIT-AP University, I've worked on projects like Fake News Detection using AI and Infant Cry Classification using Raspberry Pi, Assesment of blast induced effects using ML and Online-Bike Showroom using MERN.
-                </p>
-                <p className="text-left">
-                  These experiences helped me understand the full development lifecycle and enhanced my skills in web development and AI. I'm AWS Cloud Practitioner certified and completed a MERN Stack internship at ETHNUS.
-                </p>
-                <p className="text-left">
-                  I enjoy collaborating in teams, solving problems creatively, and building user-centric solutions. Whether it's designing a responsive front end or built machine learning models, I love bringing ideas to life through code.
-                </p>
-                <p className="text-left">
-                  My goal is to contribute to dynamic tech teams where I can keep learning and work on impactful projects that make a difference.
+              <div className="space-y-4 text-base text-gray-300 leading-normal text-justify flex-grow">
+                <p>
+                  I'm a passionate Software Engineer with a strong foundation in Java, Mysql and hands-on experience in MERN Full Stack Development. At VIT-AP University, I’ve worked on projects like Fake News Detection using AI, Infant Cry Classification with Raspberry Pi, Blast Impact Assessment using ML, and an Online Bike Showroom using MERN. I'm AWS Cloud Practitioner certified and completed a MERN Stack internship at ETHNUS. I enjoy collaborating in teams, solving real-world problems, and building user-focused web and AI solutions. I'm eager to contribute to dynamic tech teams and grow through impactful projects.
                 </p>
               </div>
             </div>
           </div>
 
-          {/* Right side highlights */}
-          <div className="grid gap-6">
-            {highlights.map((item, index) => (
-              <Card key={index} className="group hover:shadow-2xl transition-all duration-500 border-0 overflow-hidden">
-                <CardContent className={`p-0 bg-gradient-to-br ${item.bgColor}`}>
-                  <div className="p-6 relative">
-                    <div className="flex items-start space-x-4">
-                      <div className={`p-4 bg-gradient-to-br ${item.color} rounded-2xl text-white shadow-lg group-hover:scale-110 transition-transform duration-300`}>
-                        {item.icon}
-                      </div>
-                      <div className="flex-1">
-                        <h3 className="text-xl font-bold text-white mb-2">{item.title}</h3>
-                        <p className="text-gray-300 leading-relaxed">{item.content}</p>
+          {/* Education Card */}
+          <div className="h-full">
+            <Card className="group hover:shadow-2xl transition-all duration-500 border-0 overflow-hidden h-full">
+              <CardContent className="p-0 bg-gradient-to-br from-blue-900 to-cyan-900 h-full">
+                <div className="p-6 relative h-full flex flex-col">
+                  <div className="flex items-start space-x-4">
+                    <div className="p-3 bg-gradient-to-br from-blue-600 to-cyan-600 rounded-2xl text-white shadow-lg group-hover:scale-110 transition-transform duration-300">
+                      <GraduationCap className="w-6 h-6" />
+                    </div>
+                    <div className="flex-1 flex flex-col h-full">
+                      <h3 className="text-xl font-bold text-white mb-4">Education Journey</h3>
+                      
+                      <div className="relative pl-6 flex-grow">
+                        {/* Timeline connector - spans full height */}
+                        <div className="absolute left-5 top-0.5 bottom-0.5 w-0.5 bg-gradient-to-b from-blue-500 to-cyan-500"></div>
+                        
+                        <div className="space-y-5 h-full">
+                          {educationTimeline.map((item, index) => (
+                            <div key={index} className="relative flex items-start pb-4 last:pb-0">
+                              {/* Timeline dot */}
+                              <div className={`absolute left-0 w-4 h-4 rounded-full bg-gradient-to-br ${item.color} flex items-center justify-center -translate-x-1/2 z-10`}>
+                                <div className="bg-white rounded-full w-1 h-1"></div>
+                              </div>
+                              
+                              {/* Timeline content */}
+                              <div className="ml-6 w-full">
+                                <div className="flex justify-between items-start">
+                                  <div>
+                                    <div className="flex items-start">
+                                      <div className="mr-2">{item.icon}</div>
+                                      <div>
+                                        <h4 className="text-base font-bold text-white">
+                                          {item.title}
+                                        </h4>
+                                        <p className="text-cyan-300 text-sm mt-1">{item.institution}</p>
+                                      </div>
+                                    </div>
+                                  </div>
+                                  <div className="flex items-center bg-blue-800/30 px-2 py-1 rounded-full">
+                                    <span className="text-xs text-cyan-300 font-medium">{item.period}</span>
+                                  </div>
+                                </div>
+                                
+                                {/* Performance metric */}
+                                <div className="mt-2 flex items-center">
+                                  <Trophy className="w-4 h-4 text-yellow-400 mr-1" />
+                                  <span className="text-sm font-medium text-yellow-300">{item.performance}</span>
+                                </div>
+                              </div>
+                            </div>
+                          ))}
+                        </div>
                       </div>
                     </div>
-                    <div className="absolute top-0 right-0 w-20 h-20 bg-white/5 rounded-full -translate-y-4 translate-x-4"></div>
                   </div>
-                </CardContent>
-              </Card>
-            ))}
+                  
+                  {/* Decorative elements */}
+                  <div className="absolute top-0 right-0 w-16 h-16 bg-white/5 rounded-full -translate-y-4 translate-x-4"></div>
+                </div>
+              </CardContent>
+            </Card>
           </div>
         </div>
 
@@ -137,9 +148,9 @@ const AboutSection = () => {
               {passions.map((passion, index) => (
                 <div
                   key={index}
-                  className="flex-1 p-4 bg-gradient-to-br from-gray-800 to-gray-700 rounded-xl border border-gray-600 text-center hover:shadow-md transition-all duration-300"
+                  className="flex-1 p-4 bg-gradient-to-br from-gray-800 to-gray-700 rounded-xl border border-gray-600 text-center hover:shadow-md transition-all duration-300 group"
                 >
-                  <div className="text-3xl mb-2">{passion.icon}</div>
+                  <div className="text-3xl mb-2 group-hover:scale-125 transition-transform duration-300">{passion.icon}</div>
                   <h4 className="font-semibold text-white mb-1">{passion.title}</h4>
                   <p className="text-sm text-gray-300">{passion.desc}</p>
                 </div>
@@ -155,7 +166,7 @@ const AboutSection = () => {
               { icon: <Code className="w-8 h-8 text-blue-400" />, label: "publications", value: "1" },
               { icon: <Briefcase className="w-8 h-8 text-green-400" />, label: "Projects Completed", value: "5+" },
               { icon: <Award className="w-8 h-8 text-yellow-400" />, label: "Certifications", value: "8+" },
-              { icon: <Globe className="w-8 h-8 text-purple-400" />, label: "Languages Known", value: "3" }
+              { icon: <Star className="w-8 h-8 text-purple-400" />, label: "Academic Excellence", value: "3" }
             ].map(({ icon, label, value }, i) => (
               <div
                 key={i}
