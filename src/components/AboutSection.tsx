@@ -74,7 +74,7 @@ const AboutSection = () => {
           {/* Education Card */}
           <div className="h-full">
             <Card className="group hover:shadow-2xl transition-all duration-500 border-0 overflow-hidden h-full">
-              <CardContent className="p-0 bg-gradient-to-br from-blue-900 to-cyan-900 h-full">
+              <CardContent className="p-0 bg-gradient-to-br from-blue-900 to-purple-900 h-full">
                 <div className="p-6 relative h-full flex flex-col">
                   <div className="flex items-start space-x-4">
                     <div className="p-3 bg-gradient-to-br from-blue-600 to-cyan-600 rounded-2xl text-white shadow-lg group-hover:scale-110 transition-transform duration-300">
