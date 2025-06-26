@@ -109,7 +109,7 @@ const Footer = () => {
             </div>
           <br />
             <a
-            href="https://drive.google.com/file/d/1csq3JCoc6Scwcb9W-kYWG9ribJ1ua6ZV&export=download"
+            href="https://drive.google.com/uc?export=download&id=1csq3JCoc6Scwcb9W-kYWG9ribJ1ua6ZV"
             target="_blank"
             rel="noopener noreferrer"
 >
