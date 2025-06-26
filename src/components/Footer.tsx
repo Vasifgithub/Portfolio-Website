@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { Button } from '@/components/ui/button';
 import { Separator } from '@/components/ui/separator';
@@ -57,7 +56,7 @@ const Footer = () => {
     'Web Development',
     'AI/ML',
     'AWS Cloud Computing',
-    'software Development',
+    'Software Development',
   ];
 
   const achievements = [
@@ -101,23 +100,25 @@ const Footer = () => {
                 <Mail className="w-4 h-4 text-blue-400" />
                 <span className="text-sm">vasif951521@gmail.com</span>
               </div>
-          
               <div className="flex items-center space-x-2 text-gray-300">
                 <Phone className="w-4 h-4 text-blue-400" />
                 <span className="text-sm">+91 8125725362</span>
               </div>
             </div>
-          <br />
-            <a
-            href="https://drive.google.com/uc?export=download&id=1csq3JCoc6Scwcb9W-kYWG9ribJ1ua6ZV"
-            target="_blank"
-            rel="noopener noreferrer"
->
-          <Button className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white">
-          <Download className="w-4 h-4 mr-2" />
-          Download Resume
-          </Button>
-          </a>
+
+            {/* Resume Download Button */}
+            <div className="mt-4">
+              <a
+                href="https://drive.google.com/uc?export=download&id=1csq3JCoc6Scwcb9W-kYWG9ribJ1ua6ZV"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <Button className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white">
+                  <Download className="w-4 h-4 mr-2" />
+                  Download Resume
+                </Button>
+              </a>
+            </div>
           </div>
 
           {/* Quick Links */}
@@ -138,7 +139,7 @@ const Footer = () => {
             </ul>
           </div>
 
-          {/* Tech Stack */}
+          {/* Tech Stack & Achievements */}
           <div className="space-y-6">
             <h3 className="text-xl font-bold text-white">Tech Stack</h3>
             <div className="flex flex-wrap gap-2">
@@ -165,10 +166,9 @@ const Footer = () => {
             </div>
           </div>
 
-          {/* Social Links & Connect */}
+          {/* Social & Contact */}
           <div className="space-y-6">
             <h3 className="text-xl font-bold text-white">Let's Connect</h3>
-            
             <div className="space-y-4">
               {socialLinks.map((social, index) => (
                 <a
@@ -195,18 +195,18 @@ const Footer = () => {
             <div className="bg-gradient-to-r from-blue-600/20 to-purple-600/20 p-4 rounded-lg border border-blue-500/30">
               <h4 className="font-semibold text-white mb-2">Open to Opportunities</h4>
               <p className="text-sm text-gray-300 mb-3">
-                Currently seeking full-time opportunities in software engineering, AI/ML, and Web Devlopment.
+                Currently seeking full-time opportunities in software engineering, AI/ML, and Web Development.
               </p>
-             <a href="mailto:vasif951521@gmail.com">
-             <Button 
-             variant="outline" 
-             size="sm" 
-             className="w-full border-blue-400 text-blue-400 hover:bg-blue-400 hover:text-white"
-            >
-            <Mail className="w-4 h-4 mr-2" />
-           Get In Touch
-          </Button>
-          </a>
+              <a href="mailto:vasif951521@gmail.com">
+                <Button 
+                  variant="outline" 
+                  size="sm" 
+                  className="w-full border-blue-400 text-blue-400 hover:bg-blue-400 hover:text-white"
+                >
+                  <Mail className="w-4 h-4 mr-2" />
+                  Get In Touch
+                </Button>
+              </a>
             </div>
           </div>
         </div>
@@ -220,7 +220,6 @@ const Footer = () => {
           <div className="flex items-center space-x-2 text-gray-400">
             <span>© {currentYear} Vasif Uravakonda. All rights reserved.</span>
           </div>
-          
           <div className="flex items-center space-x-6 text-gray-400">
             <span className="flex items-center space-x-1 text-sm">
               <span>Made with</span>
@@ -228,7 +227,6 @@ const Footer = () => {
               <span>using React, TypeScript & Tailwind CSS</span>
             </span>
           </div>
-          
           <div className="flex items-center space-x-4 text-gray-400 text-sm">
             <a href="#" className="hover:text-blue-400 transition-colors">Privacy Policy</a>
             <span>•</span>
