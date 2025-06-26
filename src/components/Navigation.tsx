@@ -48,7 +48,7 @@ const Navigation = () => {
     { label: 'Contact', href: '#contact', id: 'contact' },
   ];
 
-  const resumeLink = "https://drive.google.com/file/d/1rl1JiybDdPrDqbFDKU1Iw6XRE0xw9aSZ/view?usp=sharing";
+  const resumeLink = "https://drive.google.com/file/d/1csq3JCoc6Scwcb9W-kYWG9ribJ1ua6ZV/view?usp=sharing";
 
   return (
     <motion.nav
