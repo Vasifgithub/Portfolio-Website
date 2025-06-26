@@ -16,7 +16,7 @@ const AboutSection = () => {
       period: "2021-2025",
       title: "B.Tech in CSE - AIML",
       institution: "VIT-AP University, Amaravati",
-      performance: "CGPA: 8.19",
+      performance: "CGPA: 8.18",
       color: "from-blue-500 to-cyan-500",
       highlight: true
     },
