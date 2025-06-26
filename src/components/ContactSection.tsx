@@ -392,7 +392,7 @@ const ContactSection = () => {
                     </p>
                   </div>
                   <a
-                    href="https://drive.google.com/file/d/1rl1JiybDdPrDqbFDKU1Iw6XRE0xw9aSZ/view?usp=sharing"
+                    href="https://drive.google.com/file/d/1csq3JCoc6Scwcb9W-kYWG9ribJ1ua6ZV/view?usp=sharing"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="w-full inline-flex items-center justify-center bg-white text-blue-700 hover:bg-gray-50 text-base font-medium py-3 px-4 rounded-md transition-colors shadow-sm"
